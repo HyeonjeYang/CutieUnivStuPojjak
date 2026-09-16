@@ -1,7 +1,8 @@
 import { invoke } from "@tauri-apps/api/core";
 import "./style.css";
 
-const FRAME_MS = 180;
+const FRAME_DELAY_MIN = 450;
+const FRAME_DELAY_MAX = 850;
 const MOVE_STEP = 12;
 const MOOD_DELAY_MIN = 6_000;
 const MOOD_DELAY_MAX = 12_000;
@@ -130,6 +131,22 @@ function scheduleMoodChange() {
   moodTimerId = window.setTimeout(() => switchMood(nextMood), delay);
 }
 
+function scheduleNextFrame() {
+  window.clearTimeout(timerId);
+  const delay =
+    FRAME_DELAY_MIN + Math.random() * (FRAME_DELAY_MAX - FRAME_DELAY_MIN);
+
+  timerId = window.setTimeout(async () => {
+    try {
+      await showFrame();
+    } catch (error) {
+      console.error(error);
+    } finally {
+      scheduleNextFrame();
+    }
+  }, delay);
+}
+
 function movePet(key) {
   const offsets = {
     ArrowLeft: [-MOVE_STEP, 0],
@@ -153,7 +170,7 @@ async function start() {
   await prepareFrames();
   await showFrame();
   await invoke("show_pet");
-  timerId = window.setInterval(() => showFrame().catch(console.error), FRAME_MS);
+  scheduleNextFrame();
   scheduleMoodChange();
 }
 
@@ -181,7 +198,7 @@ window.addEventListener("keydown", (event) => {
 });
 
 window.addEventListener("beforeunload", () => {
-  window.clearInterval(timerId);
+  window.clearTimeout(timerId);
   window.clearTimeout(moodTimerId);
 });
 
