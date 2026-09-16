@@ -57,7 +57,7 @@ Frames are stored in `src/assets/mood1/` and `src/assets/mood2/` as `mathgaki-mo
 
 ## Credit
 
-Image credit: Hyeonje Yang. The animation frames were enhanced from the original photograph.
+Image credit: Hyeonje Yang. The animation frames were enhanced from the original illustration.
 
 ## License
 
@@ -65,5 +65,5 @@ MIT License
 
 Copyright (c) 2026 Present_0206
 
-<img width="1369" height="1802" alt="수학이" src="https://github.com/user-attachments/assets/9a83381f-7de5-4f30-8acc-14935ccb8126" />
+<img width="684.5" height="901" alt="수학이" src="https://github.com/user-attachments/assets/9a83381f-7de5-4f30-8acc-14935ccb8126" />
 
