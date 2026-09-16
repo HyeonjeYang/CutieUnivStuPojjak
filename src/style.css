@@ -1,0 +1,30 @@
+:root,
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: transparent !important;
+}
+
+body {
+  user-select: none;
+}
+
+#app {
+  display: grid;
+  place-items: center;
+}
+
+#pet {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+#pet:active {
+  cursor: grabbing;
+}

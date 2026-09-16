@@ -1,0 +1,19 @@
+[package]
+name = "cutie-univ-stu-pojjak"
+version = "0.1.0"
+description = "A lightweight desktop pet"
+authors = ["Present_0206"]
+edition = "2021"
+
+[lib]
+name = "cutie_univ_stu_pojjak_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+
+[target.'cfg(windows)'.dependencies]
+windows = { version = "0.61", features = ["Win32_Foundation", "Win32_Graphics_Gdi"] }
