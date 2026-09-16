@@ -1,6 +1,6 @@
 # CutieUnivStuPojjak
 
-A minimal transparent Windows desktop pet built with Tauri 2. Transparent pixels are click-through; drag the visible character to move it.
+A minimal transparent Windows desktop GF built with Tauri 2. Transparent pixels are click-through; drag the visible character to move it.
 
 ## Requirements
 
@@ -61,4 +61,9 @@ Image credit: Hyeonje Yang. The animation frames were enhanced from the original
 
 ## License
 
-[MIT](LICENSE)
+MIT License
+
+Copyright (c) 2026 Present_0206
+
+<img width="1369" height="1802" alt="수학이" src="https://github.com/user-attachments/assets/9a83381f-7de5-4f30-8acc-14935ccb8126" />
+
