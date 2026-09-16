@@ -9,6 +9,17 @@ A minimal transparent Windows desktop pet built with Tauri 2. Transparent pixels
 - Rust `1.77.2+` with the MSVC toolchain
 - Visual Studio Build Tools with **Desktop development with C++**
 
+## Download
+
+With Git:
+
+```cmd
+git clone https://github.com/HyeonjeYang/CutieUnivStuPojjak.git
+cd CutieUnivStuPojjak
+```
+
+Without Git, [download the ZIP](https://github.com/HyeonjeYang/CutieUnivStuPojjak/archive/refs/heads/main.zip), extract it, and open the extracted folder.
+
 ## Run
 
 Open Command Prompt in the repository root:
